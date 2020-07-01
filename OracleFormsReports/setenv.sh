@@ -4,7 +4,7 @@
 # MUST: Customize this to your local env
 #===============================================
 #
-# Directory where all domains/db data etc are 
+# Directory where all domains/db data etc are
 # kept. Directories will be created here
 export DC_USERHOME=/opt/oracle
 
@@ -28,9 +28,9 @@ exportComposeEnv() {
   #
   export DC_ORCL_PORT=1521
   export DC_ORCL_OEM_PORT=5500
-  export DC_ORCL_SID=frdb
-  export DC_ORCL_PDB=frpdb
-  export DC_ORCL_SYSPWD=Oracle12c
+  export DC_ORCL_SID=xe
+  export DC_ORCL_PDB=xe
+  export DC_ORCL_SYSPWD=oracle
   export DC_ORCL_HOST=${DC_HOSTNAME}
   #
   export DC_ORCL_DBDATA=${DC_USERHOME}/oradata
@@ -68,7 +68,7 @@ exportComposeEnv() {
   export DC_ADM_PWD=welcome1
   export DC_ADMINPORT=7001
   export DC_ADMINPORTSSL=7101
-  export DC_AS_HOST=`hostname -f`
+  export DC_AS_HOST=localhost
 
   # Name and Port for the Forms Managed Server
   export DC_FORMS_MS_NAME=MS_FORMS
@@ -86,7 +86,7 @@ exportComposeEnv() {
   export DC_REP_SERVER_NAME=repserver1
 
   # NodeManager
-  export DC_NM_LISTENADDRESS=`hostname -f`
+  export DC_NM_LISTENADDRESS=localhost
   export DC_NM_TYPE=SSL
   export DC_NM_PORT=5556
   export DC_NM_USERNAME=nodemanager
@@ -94,9 +94,9 @@ exportComposeEnv() {
 
   # Repository Connect
   export DC_DBUSER=sys
-  export DC_DBPWD=Oracle12c
+  export DC_DBPWD=oracle
   export DC_DBROLE=SYSDBA
-  export DC_COMPONENTPWD=Oracle12c
+  export DC_COMPONENTPWD=oracle
   export DC_SCHEMA_PREFIX=${DC_DOMAIN_NAME}
   export DC_DB_HOST=172.17.0.1
   export DC_DB_PORT=${DC_ORCL_PORT}
@@ -108,7 +108,7 @@ exportComposeEnv() {
   #
   # Default version to use for compose images
   #
-  export DC_FR_VERSION=12.2.1.2
+  export DC_FR_VERSION=12.2.1.4
 }
 
 #===============================================
