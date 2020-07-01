@@ -1,5 +1,5 @@
-#!/bin/bash
-# 
+#!/usr/bin/env bash
+#
 # Since: October, 2014
 # Author: monica.riccelli@oracle.com
 # Description: script to build a Docker image for FMW Infrastructure
