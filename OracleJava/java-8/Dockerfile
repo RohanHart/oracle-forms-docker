@@ -5,7 +5,7 @@ FROM oraclelinux:latest
 
 MAINTAINER Dirk Nachbar <https://dirknachbar.blogspot.com>
 
-ENV JAVA_PKG=jdk-8u151-linux-x64.tar.gz \
+ENV JAVA_PKG=jdk-8u241-linux-x64.tar.gz \
     JAVA_HOME=/usr/java/default
 
 ADD $JAVA_PKG /usr/java/
